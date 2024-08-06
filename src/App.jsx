@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GeneralInformationForm from "./components/general-information-form/GeneralInformationForm";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
