@@ -1,7 +1,8 @@
-#cv {
-  height: 842px;
-  width: 595px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px red solid;
+.row {
+  border: 1px solid red;
+}
+
+.inner-div {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
 }
