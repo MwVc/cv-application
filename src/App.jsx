@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Form from "./components/general-information-form/GeneralInformationForm";
+import Form from "./components/Form/Form";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
