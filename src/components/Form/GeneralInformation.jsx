@@ -2,7 +2,6 @@ export default function GeneralInformation({ person, setPerson }) {
   function handlePerson(event) {
     const { name, value, type } = event.target;
     setPerson({ ...person, [name]: value });
-    console.log(person);
   }
 
   function handleSubmit(event) {

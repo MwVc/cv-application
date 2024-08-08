@@ -21,7 +21,7 @@ function App() {
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
-            <Resume />
+            <Resume person={person} />
           </div>
         </div>
       </div>
