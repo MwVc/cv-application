@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 
 export default function GeneralInformation() {
   const [person, setPerson] = useState({
@@ -31,10 +29,19 @@ export default function GeneralInformation() {
             required={true}
             onChange={handlePerson}
             name="firstName"
+            id="firstName"
           />
         </div>
         <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            className="form-control"
+            required={true}
+            onChange={handlePerson}
+            name="lastName"
+            id="lastName"
+          />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email adress:</label>
