@@ -10,6 +10,9 @@ export default function GeneralInformation({ person, setPerson }) {
     console.log("Event prevented");
   }
 
+  function handleEdit() {
+    console.log("Editing CV");
+  }
   return (
     <div className="container">
       <form action="#" onSubmit={handleSubmit}>
@@ -46,10 +49,18 @@ export default function GeneralInformation({ person, setPerson }) {
             name="email"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-        <button className="btn btn-info">Edit</button>
+        <div className="d-flex justify-content-between">
+          <button type="submit" className="btn btn-primary w-45">
+            Submit
+          </button>
+          <button
+            className="btn btn-info w-45"
+            onClick={handleEdit}
+            type="button"
+          >
+            Edit
+          </button>
+        </div>
       </form>
     </div>
   );
