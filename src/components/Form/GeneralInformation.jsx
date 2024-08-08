@@ -49,6 +49,7 @@ export default function GeneralInformation({ person, setPerson }) {
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
+        <button className="btn btn-info">Edit</button>
       </form>
     </div>
   );
