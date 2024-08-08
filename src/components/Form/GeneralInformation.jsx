@@ -1,12 +1,4 @@
-import { useState } from "react";
-
-export default function GeneralInformation() {
-  const [person, setPerson] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-  });
-
+export default function GeneralInformation({ person, setPerson }) {
   function handlePerson(event) {
     const { name, value, type } = event.target;
     setPerson({ ...person, [name]: value });

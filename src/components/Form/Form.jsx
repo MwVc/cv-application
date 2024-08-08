@@ -4,13 +4,13 @@ import PracticalExperience from "./PracticalExperience";
 import Accordion from "react-bootstrap/Accordion";
 import { AccordionBody } from "react-bootstrap";
 
-export default function Form() {
+export default function Form({ person, setPerson }) {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>General Information</Accordion.Header>
         <Accordion.Body>
-          <GeneralInformation />
+          <GeneralInformation person={person} setPerson={setPerson} />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">

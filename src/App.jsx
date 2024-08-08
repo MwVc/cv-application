@@ -4,13 +4,19 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [person, setPerson] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
+
   return (
     <>
       <div className="container">
         <div className="container vh-100 d-flex flex-row">
           <div className="inner-div flex-fill p-3">
             <section id="general-information">
-              <Form />
+              <Form person={person} setPerson={setPerson} />
             </section>
           </div>
           <div className="inner-div flex-fill p-3"></div>
