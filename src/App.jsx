@@ -8,7 +8,11 @@ function App() {
   const [person, setPerson] = useState({
     firstName: "",
     lastName: "",
+    phone: "",
     email: "",
+    linkedIn: "",
+    city: "",
+    country: "",
   });
 
   return (
