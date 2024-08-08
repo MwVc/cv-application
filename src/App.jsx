@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Form from "./components/Form/Form";
+import Resume from "./components/Resume/Resume";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,12 +21,7 @@ function App() {
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
-            <div className="page" data-size="A4">
-              <div className="box">
-                <div className="left-panel"></div>
-                <div className="right-panel"></div>
-              </div>
-            </div>
+            <Resume />
           </div>
         </div>
       </div>

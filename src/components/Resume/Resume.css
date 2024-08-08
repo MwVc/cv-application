@@ -1,0 +1,29 @@
+.page[data-size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  border: 1px red solid;
+}
+
+.page > .box {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.left-panel {
+  width: 27%;
+  background-color: #484444;
+  padding: 0.7cm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-panel {
+  width: 73%;
+  padding: 0.7cm;
+}
