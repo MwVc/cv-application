@@ -36,7 +36,36 @@ export default function Resume({ person }) {
               </div>
             </div>
             <div className="item bottom-line-separator">
-              <h2></h2>
+              <h2>SKILLS</h2>
+              <div className="small-text">
+                <div className="skill">
+                  <div>
+                    <span>Accounting</span>
+                  </div>
+                  <div className="years-of-experience">
+                    <span className="align-right">14</span>
+                    <span className="align-left">Years</span>
+                  </div>
+                </div>
+                <div className="skill">
+                  <div>
+                    <span>Word</span>
+                  </div>
+                  <div className="years-of-experience">
+                    <span className="align-right">3</span>
+                    <span className="align-left">Years</span>
+                  </div>
+                </div>
+                <div className="skill">
+                  <div>
+                    <span>Powerpoint</span>
+                  </div>
+                  <div className="years-of-experience">
+                    <span className="align-right">1</span>
+                    <span className="align-left">Year</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="item">
               <h2>EDUCATION</h2>
