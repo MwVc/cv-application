@@ -2,7 +2,6 @@ import { useState } from "react";
 import Form from "./components/Form/Form";
 import Resume from "./components/Resume/Resume";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [person, setPerson] = useState({

@@ -48,6 +48,37 @@ export default function GeneralInformation({ person, setPerson }) {
             name="email"
           />
         </div>
+        <div className="form-group">
+          <label htmlFor="phone">Phone:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="phone"
+            name="phone"
+            onChange={handlePerson}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="country">Country:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="country"
+            name="country"
+            onChange={handlePerson}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="city">City:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="city"
+            name="city"
+            onChange={handlePerson}
+          />
+        </div>
+
         <div className="d-flex justify-content-between">
           <button type="submit" className="btn btn-primary w-45">
             Submit
