@@ -61,3 +61,31 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+.left-panel .small-text,
+.left-panel .small-text,
+.left-panel .small-text span,
+.left-panel .small-text p,
+.small-text a {
+  font-size: 0.8rem;
+}
+
+.small-text,
+.small-text span,
+.small-text p,
+.small-text a {
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+.contact-icon {
+  width: 0.5cm;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.left-panel,
+.left-panel a {
+  color: #bebebe;
+  text-decoration: none;
+}
