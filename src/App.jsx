@@ -12,6 +12,10 @@ function App() {
     linkedIn: "",
     city: "",
     country: "",
+    education: [],
+    workExperience: [],
+    skills: [],
+    hobbies: [],
   });
 
   return (
