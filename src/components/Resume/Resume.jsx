@@ -101,6 +101,29 @@ export default function Resume({ person }) {
               </p>
             </div>
           </div>
+          <div className="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+              <li>
+                <div className="job-position">
+                  <span className="bolded">Accountant</span>
+                  <span>Jun 2014 - Sept 2015</span>
+                </div>
+                <div className="project-name bolded">
+                  <span>Accounting project name | Company name</span>
+                </div>
+              </li>
+              <li>
+                <div className="job-position">
+                  <span className="bolded">Digital Marketing Expert</span>
+                  <span>Nov 2020 - Sept 2021</span>
+                </div>
+                <div className="project-name bolded">
+                  <span>Project Name | Company name</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
