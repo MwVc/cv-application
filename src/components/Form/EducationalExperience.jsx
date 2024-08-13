@@ -20,6 +20,17 @@ export default function EducationalExperience({ person, setPerson }) {
             id="institution"
           />
         </div>
+        <div className="form-group">
+          <label htmlFor="qualification">Qualification:</label>
+          <input
+            type="text"
+            className="form-control"
+            required={true}
+            onChange={handleEducation}
+            name="qualification"
+            id="qualification"
+          />
+        </div>
       </form>
     </div>
   );
