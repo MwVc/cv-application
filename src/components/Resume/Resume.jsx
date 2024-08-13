@@ -7,7 +7,7 @@ export default function Resume({ person }) {
     <div className="page" data-size="A4">
       <div className="box">
         <div className="left-panel">
-          <img src="#" alt="Profile Picture" />
+          <img src="#" alt="Profile Picture" className="display-picture" />
           <div className="details">
             <div className="item bottom-line-separator">
               <h2>CONTACT</h2>
