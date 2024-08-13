@@ -3,11 +3,9 @@
   width: 21cm;
   height: 29.7cm;
   display: block;
-  border: 1px red solid;
 }
 
 .page > .box {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -190,4 +188,8 @@ h3 {
 .job-position span,
 .project-name span {
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.work-description {
+  font-weight: 100;
 }

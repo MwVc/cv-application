@@ -17,7 +17,7 @@ export default function Resume({ person }) {
                   +254702150884
                 </p>
                 <p>
-                  <i class="bi bi-envelope contact-icon"></i>
+                  <i className="bi bi-envelope contact-icon"></i>
                   <a
                     href="https://mail.google.com/mail/u/0/#inbox"
                     target="_blank"
@@ -26,11 +26,11 @@ export default function Resume({ person }) {
                   </a>
                 </p>
                 <p>
-                  <i class="bi bi-geo-alt-fill contact-icon"></i>
+                  <i className="bi bi-geo-alt-fill contact-icon"></i>
                   Mombasa, Kenya
                 </p>
                 <p className="last-pararaph-no-margin-bottom">
-                  <i class="bi bi-linkedin contact-icon"></i>
+                  <i className="bi bi-linkedin contact-icon"></i>
                   linkedIn URL
                 </p>
               </div>
@@ -110,7 +110,16 @@ export default function Resume({ person }) {
                   <span>Jun 2014 - Sept 2015</span>
                 </div>
                 <div className="project-name bolded">
-                  <span>Accounting project name | Company name</span>
+                  <span>Project name | Company name</span>
+                  <p className="work-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Corporis, ut ipsum consequatur ad fuga, atque repellat
+                    tempore quia labore maxime voluptatum, iste molestiae
+                    aliquam neque placeat? Doloribus cupiditate repudiandae unde
+                    magni ipsam nemo natus vitae incidunt iusto vero rem
+                    consectetur, odit hic sit temporibus maxime quae, saepe in
+                    aliquam! Nulla?
+                  </p>
                 </div>
               </li>
               <li>
@@ -120,6 +129,36 @@ export default function Resume({ person }) {
                 </div>
                 <div className="project-name bolded">
                   <span>Project Name | Company name</span>
+                  <p className="work-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quod obcaecati fugiat in dignissimos error, quo, natus ipsam
+                    ipsum numquam iure placeat voluptatum iusto laudantium
+                    nesciunt nihil sit pariatur modi sunt ullam accusantium
+                    porro! Necessitatibus maxime, sunt reprehenderit autem
+                    dolore corrupti, accusantium deleniti maiores ipsam,
+                    aspernatur repellendus mollitia illo recusandae odit.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="job-position">
+                  <span className="bolded">Lidar Annotation</span>
+                  <span>2016 - 2018</span>
+                </div>
+                <div className="project-name bolded">
+                  <span>Project Name | Company name</span>
+                  <p className="work-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem nemo itaque dignissimos voluptates sunt
+                    quidem molestiae ut maiores? Exercitationem fugiat nobis
+                    eaque dolorum expedita distinctio dolores nulla deserunt
+                    rerum. Consectetur ea ad debitis corporis voluptatum tenetur
+                    voluptas accusamus suscipit aut soluta necessitatibus
+                    quaerat enim possimus ratione ullam in magni, quos
+                    perspiciatis hic incidunt fugit vero rem obcaecati? Totam
+                    hic maiores laudantium iusto magnam, sed accusantium
+                    adipisci! Nesciunt, sit. Nobis, vel!
+                  </p>
                 </div>
               </li>
             </ul>
