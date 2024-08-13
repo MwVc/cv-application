@@ -77,7 +77,31 @@ export default function Resume({ person }) {
             </div>
           </div>
         </div>
-        <div className="right-panel"></div>
+        <div className="right-panel">
+          <div>
+            <h1>John Doe</h1>
+            <div className="small-text">
+              <h3>Accountant</h3>
+            </div>
+          </div>
+          <div>
+            <h2>About Me</h2>
+            <div className="small-text">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Maiores ducimus modi nihil, quos hic qui eum dolorem ipsam odit
+                amet expedita? Consequuntur sit, alias eveniet, rerum soluta,
+                iste quod atque dolore maiores repellendus aut quidem voluptatum
+                dolores! Consectetur corporis sit ipsa ipsum exercitationem
+                minus qui non, labore asperiores at dolorem.
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quisquam, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
