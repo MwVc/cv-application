@@ -69,6 +69,11 @@ export default function Resume({ person }) {
             </div>
             <div className="item">
               <h2>EDUCATION</h2>
+              <div className="smallText">
+                <p className="bolded white">Bachelor of Economics</p>
+                <p>University of Sidney</p>
+                <p>2010 - 2014</p>
+              </div>
             </div>
           </div>
         </div>

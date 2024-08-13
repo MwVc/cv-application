@@ -113,3 +113,11 @@ img {
   width: 0.6cm;
   margin-right: 0.1cm;
 }
+
+.bolded {
+  font-weight: bold;
+}
+
+.white {
+  color: white;
+}
