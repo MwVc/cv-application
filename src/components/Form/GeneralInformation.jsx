@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function GeneralInformation() {
-  const [generalInformation, setGeneralInformation] = useState({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -10,9 +10,6 @@ export default function GeneralInformation() {
     country: "",
     linkedIn: "",
   });
-
-  function handleSubmit() {}
-  function handleEdit() {}
 
   return (
     <div className="container">
@@ -23,7 +20,7 @@ export default function GeneralInformation() {
             type="text"
             className="form-control"
             required={true}
-            // onChange={handlePerson}
+            value={formData.firstName}
             name="firstName"
             id="firstName"
           />
@@ -34,7 +31,7 @@ export default function GeneralInformation() {
             type="text"
             className="form-control"
             required={true}
-            // onChange={handlePerson}
+            value={formData.lastName}
             name="lastName"
             id="lastName"
           />
@@ -46,7 +43,7 @@ export default function GeneralInformation() {
             className="form-control"
             id="email"
             required={true}
-            // onChange={handlePerson}
+            value={formData.email}
             name="email"
           />
         </div>
@@ -56,7 +53,7 @@ export default function GeneralInformation() {
             type="text"
             className="form-control"
             id="linked-in"
-            // onChange={handlePerson}
+            value={formData.linkedIn}
             name="linked-in"
           />
         </div>
@@ -67,7 +64,7 @@ export default function GeneralInformation() {
             className="form-control"
             id="phone"
             name="phone"
-            // onChange={handlePerson}
+            value={formData.phone}
           />
         </div>
         <div className="form-group">
