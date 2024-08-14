@@ -49,6 +49,17 @@ export default function GeneralInformation({ person, setPerson }) {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="linked-in">LinkedIn:</label>
+          <input
+            type="text"
+            className="form-control"
+            id="linked-in"
+            required={true}
+            onChange={handlePerson}
+            name="linked-in"
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="phone">Phone:</label>
           <input
             type="text"
