@@ -9,7 +9,7 @@ export default function Form({ person, setPerson }) {
       <Accordion.Item eventKey="0">
         <Accordion.Header>General Information</Accordion.Header>
         <Accordion.Body>
-          <GeneralInformation />
+          <GeneralInformation person={person} setPerson={setPerson} />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
