@@ -1,7 +1,7 @@
 import "./Resume.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-export default function Resume() {
+export default function Resume({ submittedData }) {
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -13,19 +13,25 @@ export default function Resume() {
               <div className="small-text">
                 <p>
                   <i className="bi bi-telephone contact-icon"></i>
+                  {submittedData && submittedData.phone}
                 </p>
                 <p>
                   <i className="bi bi-envelope contact-icon"></i>
                   <a
                     href="https://mail.google.com/mail/u/0/#inbox"
                     target="_blank"
-                  ></a>
+                  >
+                    {submittedData && submittedData.email}
+                  </a>
                 </p>
                 <p>
                   <i className="bi bi-geo-alt-fill contact-icon"></i>
+                  {submittedData &&
+                    `${submittedData.city}, ${submittedData.country}`}
                 </p>
                 <p className="last-pararaph-no-margin-bottom">
-                  <i className="bi bi-linkedin contact-icon"></i>\
+                  <i className="bi bi-person-workspace"></i>
+                  {submittedData && submittedData.linkedIn}
                 </p>
               </div>
             </div>
@@ -73,9 +79,12 @@ export default function Resume() {
         </div>
         <div className="right-panel">
           <div>
-            <h1>John Doe</h1>
+            <h1>
+              {submittedData &&
+                `${submittedData.firstName} ${submittedData.lastName}`}
+            </h1>
             <div className="small-text">
-              <h3>Accountant</h3>
+              <h3>{submittedData && submittedData.profession}</h3>
             </div>
           </div>
           <div>
