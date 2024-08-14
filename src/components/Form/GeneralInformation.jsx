@@ -1,17 +1,19 @@
-export default function GeneralInformation({ person, setPerson }) {
-  function handlePerson(event) {
-    const { name, value, type } = event.target;
-    setPerson({ ...person, [name]: value });
-  }
+import { useState } from "react";
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    console.log("Event prevented");
-  }
+export default function GeneralInformation() {
+  const [generalInformation, setGeneralInformation] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    city: "",
+    country: "",
+    linkedIn: "",
+  });
 
-  function handleEdit() {
-    console.log("Editing CV");
-  }
+  function handleSubmit() {}
+  function handleEdit() {}
+
   return (
     <div className="container">
       <form action="#" onSubmit={handleSubmit}>
@@ -21,7 +23,7 @@ export default function GeneralInformation({ person, setPerson }) {
             type="text"
             className="form-control"
             required={true}
-            onChange={handlePerson}
+            // onChange={handlePerson}
             name="firstName"
             id="firstName"
           />
@@ -32,7 +34,7 @@ export default function GeneralInformation({ person, setPerson }) {
             type="text"
             className="form-control"
             required={true}
-            onChange={handlePerson}
+            // onChange={handlePerson}
             name="lastName"
             id="lastName"
           />
@@ -44,7 +46,7 @@ export default function GeneralInformation({ person, setPerson }) {
             className="form-control"
             id="email"
             required={true}
-            onChange={handlePerson}
+            // onChange={handlePerson}
             name="email"
           />
         </div>
@@ -54,8 +56,7 @@ export default function GeneralInformation({ person, setPerson }) {
             type="text"
             className="form-control"
             id="linked-in"
-            required={true}
-            onChange={handlePerson}
+            // onChange={handlePerson}
             name="linked-in"
           />
         </div>
@@ -66,7 +67,7 @@ export default function GeneralInformation({ person, setPerson }) {
             className="form-control"
             id="phone"
             name="phone"
-            onChange={handlePerson}
+            // onChange={handlePerson}
           />
         </div>
         <div className="form-group">
@@ -76,7 +77,7 @@ export default function GeneralInformation({ person, setPerson }) {
             className="form-control"
             id="country"
             name="country"
-            onChange={handlePerson}
+            // onChange={handlePerson}
           />
         </div>
         <div className="form-group">
@@ -86,7 +87,7 @@ export default function GeneralInformation({ person, setPerson }) {
             className="form-control"
             id="city"
             name="city"
-            onChange={handlePerson}
+            // onChange={handlePerson}
           />
         </div>
 
