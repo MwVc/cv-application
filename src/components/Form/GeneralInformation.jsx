@@ -1,27 +1,20 @@
 import { useState } from "react";
 
-export default function GeneralInformation() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    city: "",
-    country: "",
-    linkedIn: "",
-  });
-
-  const [submittedData, setSubmittedData] = useState("");
-
+export default function GeneralInformation({
+  generalInformation,
+  setGeneralInformation,
+  submittedData,
+  setSubmittedData,
+}) {
   function handleChange(event) {
     const { value, name } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setGeneralInformation({ ...generalInformation, [name]: value });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setSubmittedData(formData);
-    console.log(submittedData);
+    const data = generalInformation;
+    setSubmittedData(data);
   }
 
   return (
@@ -33,7 +26,7 @@ export default function GeneralInformation() {
             type="text"
             className="form-control"
             required={true}
-            value={formData.firstName}
+            value={generalInformation.firstName}
             name="firstName"
             id="firstName"
             onChange={handleChange}
@@ -45,7 +38,7 @@ export default function GeneralInformation() {
             type="text"
             className="form-control"
             required={true}
-            value={formData.lastName}
+            value={generalInformation.lastName}
             name="lastName"
             id="lastName"
             onChange={handleChange}
@@ -58,19 +51,19 @@ export default function GeneralInformation() {
             className="form-control"
             id="email"
             required={true}
-            value={formData.email}
+            value={generalInformation.email}
             name="email"
             onChange={handleChange}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="linked-in">LinkedIn:</label>
+          <label htmlFor="linked-in">Profession:</label>
           <input
             type="text"
             className="form-control"
-            id="linked-in"
-            value={formData.linkedIn}
-            name="linkedIn"
+            id="profession"
+            value={generalInformation.linkedIn}
+            name="profession"
             onChange={handleChange}
           />
         </div>
@@ -81,7 +74,7 @@ export default function GeneralInformation() {
             className="form-control"
             id="phone"
             name="phone"
-            value={formData.phone}
+            value={generalInformation.phone}
             onChange={handleChange}
           />
         </div>
@@ -92,7 +85,7 @@ export default function GeneralInformation() {
             className="form-control"
             id="country"
             name="country"
-            value={formData.country}
+            value={generalInformation.country}
             onChange={handleChange}
           />
         </div>
@@ -103,7 +96,7 @@ export default function GeneralInformation() {
             className="form-control"
             id="city"
             name="city"
-            value={formData.city}
+            value={generalInformation.city}
             onChange={handleChange}
           />
         </div>
