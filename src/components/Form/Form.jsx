@@ -3,13 +3,13 @@ import EducationalExperience from "./EducationalExperience";
 import PracticalExperience from "./PracticalExperience";
 import Accordion from "react-bootstrap/Accordion";
 
-export default function Form({ person, setPerson }) {
+export default function Form() {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
       <Accordion.Item eventKey="0">
         <Accordion.Header>General Information</Accordion.Header>
         <Accordion.Body>
-          <GeneralInformation person={person} setPerson={setPerson} />
+          <GeneralInformation />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
