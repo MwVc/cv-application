@@ -3,13 +3,23 @@ import EducationalExperience from "./EducationalExperience";
 import PracticalExperience from "./PracticalExperience";
 import Accordion from "react-bootstrap/Accordion";
 
-export default function Form() {
+export default function Form({
+  generalInformation,
+  submittedData,
+  setGeneralInformation,
+  setSubmittedData,
+}) {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
       <Accordion.Item eventKey="0">
         <Accordion.Header>General Information</Accordion.Header>
         <Accordion.Body>
-          <GeneralInformation />
+          <GeneralInformation
+            generalInformation={generalInformation}
+            setGeneralInformation={setGeneralInformation}
+            submittedData={submittedData}
+            setSubmittedData={setSubmittedData}
+          />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
