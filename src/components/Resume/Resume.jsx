@@ -14,7 +14,7 @@ export default function Resume({ person }) {
               <div className="small-text">
                 <p>
                   <i className="bi bi-telephone contact-icon"></i>
-                  +254702150884
+                  {person.phone}
                 </p>
                 <p>
                   <i className="bi bi-envelope contact-icon"></i>
@@ -22,16 +22,16 @@ export default function Resume({ person }) {
                     href="https://mail.google.com/mail/u/0/#inbox"
                     target="_blank"
                   >
-                    victormwadime@gmail.com
+                    {person.email}
                   </a>
                 </p>
                 <p>
                   <i className="bi bi-geo-alt-fill contact-icon"></i>
-                  Mombasa, Kenya
+                  {person.city}, {person.country}
                 </p>
                 <p className="last-pararaph-no-margin-bottom">
                   <i className="bi bi-linkedin contact-icon"></i>
-                  linkedIn URL
+                  {person.linkedIn}
                 </p>
               </div>
             </div>
@@ -40,29 +40,29 @@ export default function Resume({ person }) {
               <div className="small-text">
                 <div className="skill">
                   <div>
-                    <span>Accounting</span>
+                    <span>Skill 1</span>
                   </div>
                   <div className="years-of-experience">
-                    <span className="align-right">14</span>
+                    <span className="align-right">#</span>
                     <span className="align-left">Years</span>
                   </div>
                 </div>
                 <div className="skill">
                   <div>
-                    <span>Word</span>
+                    <span>Skill 2</span>
                   </div>
                   <div className="years-of-experience">
-                    <span className="align-right">3</span>
+                    <span className="align-right">#</span>
                     <span className="align-left">Years</span>
                   </div>
                 </div>
                 <div className="skill">
                   <div>
-                    <span>Powerpoint</span>
+                    <span>Skill 3</span>
                   </div>
                   <div className="years-of-experience">
-                    <span className="align-right">1</span>
-                    <span className="align-left">Year</span>
+                    <span className="align-right">#</span>
+                    <span className="align-left">Years</span>
                   </div>
                 </div>
               </div>
