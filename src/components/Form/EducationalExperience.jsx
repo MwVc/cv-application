@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-export default function EducationalExperience({ person, setPerson }) {
-  function handleEducation(event) {
-    const { name, value, type } = event.target;
-    console.log(name, value, type);
-  }
-
+export default function EducationalExperience() {
   return (
     <div className="container">
       <form action="#">
@@ -15,7 +10,7 @@ export default function EducationalExperience({ person, setPerson }) {
             type="text"
             className="form-control"
             required={true}
-            onChange={handleEducation}
+            // onChange={handleEducation}
             name="institution"
             id="institution"
           />
@@ -26,7 +21,7 @@ export default function EducationalExperience({ person, setPerson }) {
             type="text"
             className="form-control"
             required={true}
-            onChange={handleEducation}
+            // onChange={handleEducation}
             name="qualification"
             id="qualification"
           />
