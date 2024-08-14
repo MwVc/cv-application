@@ -11,6 +11,19 @@ export default function GeneralInformation() {
     linkedIn: "",
   });
 
+  const [submittedData, setSubmittedData] = useState("");
+
+  function handleChange(event) {
+    const { value, name } = event.target;
+    setFormData({ ...formData, [name]: value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmittedData(formData);
+    console.log(submittedData);
+  }
+
   return (
     <div className="container">
       <form action="#" onSubmit={handleSubmit}>
@@ -23,6 +36,7 @@ export default function GeneralInformation() {
             value={formData.firstName}
             name="firstName"
             id="firstName"
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -34,6 +48,7 @@ export default function GeneralInformation() {
             value={formData.lastName}
             name="lastName"
             id="lastName"
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -45,6 +60,7 @@ export default function GeneralInformation() {
             required={true}
             value={formData.email}
             name="email"
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -54,7 +70,8 @@ export default function GeneralInformation() {
             className="form-control"
             id="linked-in"
             value={formData.linkedIn}
-            name="linked-in"
+            name="linkedIn"
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -65,6 +82,7 @@ export default function GeneralInformation() {
             id="phone"
             name="phone"
             value={formData.phone}
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -74,7 +92,8 @@ export default function GeneralInformation() {
             className="form-control"
             id="country"
             name="country"
-            // onChange={handlePerson}
+            value={formData.country}
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -84,7 +103,8 @@ export default function GeneralInformation() {
             className="form-control"
             id="city"
             name="city"
-            // onChange={handlePerson}
+            value={formData.city}
+            onChange={handleChange}
           />
         </div>
 
@@ -92,11 +112,7 @@ export default function GeneralInformation() {
           <button type="submit" className="btn btn-primary w-45">
             Submit
           </button>
-          <button
-            className="btn btn-info w-45"
-            onClick={handleEdit}
-            type="button"
-          >
+          <button className="btn btn-info w-45" type="button">
             Edit
           </button>
         </div>
