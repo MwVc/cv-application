@@ -24,6 +24,9 @@ function App() {
     endYear: "",
   });
 
+  const [submittedEducationalExperience, setSubmittedEducationalExperience] =
+    useState([]);
+
   return (
     <>
       <div className="container">
@@ -37,11 +40,18 @@ function App() {
                 setSubmittedGeneralInformation={setSubmittedGeneralInformation}
                 educationalExperience={educationalExperience}
                 setEducationalExperience={setEducationalExperience}
+                submittedEducationalExperience={submittedEducationalExperience}
+                setSubmittedEducationalExperience={
+                  setSubmittedEducationalExperience
+                }
               />
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
-            <Resume submittedGeneralInformation={submittedGeneralInformation} />
+            <Resume
+              submittedGeneralInformation={submittedGeneralInformation}
+              submittedEducationalExperience={submittedEducationalExperience}
+            />
           </div>
         </div>
       </div>
