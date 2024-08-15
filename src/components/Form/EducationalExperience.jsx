@@ -1,8 +1,19 @@
 import { useState } from "react";
 
-export default function EducationalExperience() {
-  function handleSubmit() {
+export default function EducationalExperience({
+  educationalExperience,
+  setEducationalExperience,
+}) {
+  function handleSubmit(event) {
+    event.preventDefault();
     console.log("I am handling Submit");
+    console.log(educationalExperience);
+  }
+
+  function handleChange(event) {
+    const { value, name } = event.target;
+    setEducationalExperience({ ...educationalExperience, [name]: value });
+    console.log(educationalExperience);
   }
 
   return (
@@ -14,9 +25,10 @@ export default function EducationalExperience() {
             type="text"
             className="form-control"
             required={true}
-            // onChange={handleEducation}
+            onChange={handleChange}
             name="institution"
             id="institution"
+            value={educationalExperience.institution}
           />
         </div>
         <div className="form-group">
@@ -25,9 +37,10 @@ export default function EducationalExperience() {
             type="text"
             className="form-control"
             required={true}
-            // onChange={handleEducation}
+            onChange={handleChange}
             name="qualification"
             id="qualification"
+            value={educationalExperience.qualification}
           />
         </div>
         <div className="form-group">
@@ -35,9 +48,11 @@ export default function EducationalExperience() {
           <input
             type="number"
             className="form-control"
+            onChange={handleChange}
             required={true}
             name="startYear"
             id="start-year"
+            value={educationalExperience.startYear}
           />
         </div>
         <div className="form-group">
@@ -45,8 +60,10 @@ export default function EducationalExperience() {
           <input
             type="number"
             className="form-control"
+            onChange={handleChange}
             name="endYear"
             id="end-year"
+            value={educationalExperience.endYear}
           />
         </div>
         <div className="d-flex justify-content-between">
@@ -56,7 +73,7 @@ export default function EducationalExperience() {
           <button
             className="btn btn-info w-45"
             type="button"
-            onClick={console.log("submitting")}
+            onClick={() => console.log("submitting")}
             disabled={true}
           >
             Edit
