@@ -80,11 +80,12 @@ export default function Resume({ submittedData }) {
         <div className="right-panel">
           <div>
             <h1>
-              {submittedData &&
-                `${submittedData.firstName} ${submittedData.lastName}`}
+              {submittedData
+                ? `${submittedData.firstName} ${submittedData.lastName}`
+                : "Your Name"}
             </h1>
             <div className="small-text">
-              <h3>{submittedData && submittedData.profession}</h3>
+              <h3>{submittedData ? submittedData.profession : "Profession"}</h3>
             </div>
           </div>
           <div>
