@@ -13,8 +13,16 @@ function App() {
     country: "",
     profession: "",
   });
+
   const [submittedGeneralInformation, setSubmittedGeneralInformation] =
     useState(null);
+
+  const [educationalExperience, setEducationalExperience] = useState({
+    institution: "",
+    qualification: "",
+    startYear: "",
+    endYear: "",
+  });
 
   return (
     <>
@@ -27,6 +35,8 @@ function App() {
                 setGeneralInformation={setGeneralInformation}
                 submittedGeneralInformation={submittedGeneralInformation}
                 setSubmittedGeneralInformation={setSubmittedGeneralInformation}
+                educationalExperience={educationalExperience}
+                setEducationalExperience={setEducationalExperience}
               />
             </section>
           </div>
