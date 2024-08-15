@@ -3,8 +3,8 @@ import { useState } from "react";
 export default function GeneralInformation({
   generalInformation,
   setGeneralInformation,
-  submittedData,
-  setSubmittedData,
+  submittedGeneralInformation,
+  setSubmittedGeneralInformation,
 }) {
   function handleChange(event) {
     const { value, name } = event.target;
@@ -14,7 +14,7 @@ export default function GeneralInformation({
   function handleSubmit(event) {
     event.preventDefault();
     const data = generalInformation;
-    setSubmittedData(data);
+    setSubmittedGeneralInformation(data);
     setGeneralInformation({
       firstName: "",
       lastName: "",
@@ -27,8 +27,8 @@ export default function GeneralInformation({
   }
 
   function handleEdit() {
-    setGeneralInformation(submittedData);
-    setSubmittedData(null);
+    setGeneralInformation(submittedGeneralInformation);
+    setSubmittedGeneralInformation(null);
   }
 
   return (
@@ -125,7 +125,7 @@ export default function GeneralInformation({
             className="btn btn-info w-45"
             type="button"
             onClick={handleEdit}
-            disabled={!submittedData}
+            disabled={!submittedGeneralInformation}
           >
             Edit
           </button>
