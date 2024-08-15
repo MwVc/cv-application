@@ -3,17 +3,21 @@ import { useState } from "react";
 export default function EducationalExperience({
   educationalExperience,
   setEducationalExperience,
+  submittedEducationalExperience,
+  setSubmittedEducationalExperience,
 }) {
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("I am handling Submit");
-    console.log(educationalExperience);
+
+    setSubmittedEducationalExperience([
+      ...submittedEducationalExperience,
+      educationalExperience,
+    ]);
   }
 
   function handleChange(event) {
     const { value, name } = event.target;
     setEducationalExperience({ ...educationalExperience, [name]: value });
-    console.log(educationalExperience);
   }
 
   return (
@@ -49,7 +53,7 @@ export default function EducationalExperience({
             type="number"
             className="form-control"
             onChange={handleChange}
-            required={true}
+            required={false}
             name="startYear"
             id="start-year"
             value={educationalExperience.startYear}
@@ -76,7 +80,7 @@ export default function EducationalExperience({
             onClick={() => console.log("submitting")}
             disabled={true}
           >
-            Edit
+            Delete
           </button>
         </div>
       </form>
