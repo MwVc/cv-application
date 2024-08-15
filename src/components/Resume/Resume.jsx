@@ -1,7 +1,10 @@
 import "./Resume.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-export default function Resume({ submittedGeneralInformation }) {
+export default function Resume({
+  submittedGeneralInformation,
+  submittedEducationalExperience,
+}) {
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -72,11 +75,16 @@ export default function Resume({ submittedGeneralInformation }) {
             </div>
             <div className="item">
               <h2>EDUCATION</h2>
-              <div className="smallText">
-                <p className="bolded white">Bachelor of Economics</p>
-                <p>University of Sidney</p>
-                <p>2010 - 2014</p>
-              </div>
+              {submittedEducationalExperience &&
+                submittedEducationalExperience.map((object, index) => (
+                  <div className="smallText" key={index}>
+                    <p className="bolded white">{object.qualification}</p>
+                    <p>{object.institution}</p>
+                    <p>
+                      {object.startYear} - {object.endYear}
+                    </p>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
