@@ -15,6 +15,20 @@ export default function GeneralInformation({
     event.preventDefault();
     const data = generalInformation;
     setSubmittedData(data);
+    setGeneralInformation({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      city: "",
+      country: "",
+      profession: "",
+    });
+  }
+
+  function handleEdit() {
+    setGeneralInformation(submittedData);
+    setSubmittedData(null);
   }
 
   return (
@@ -107,7 +121,12 @@ export default function GeneralInformation({
           <button type="submit" className="btn btn-primary w-45">
             Submit
           </button>
-          <button className="btn btn-info w-45" type="button">
+          <button
+            className="btn btn-info w-45"
+            type="button"
+            onClick={handleEdit}
+            disabled={!submittedData}
+          >
             Edit
           </button>
         </div>
