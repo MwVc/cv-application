@@ -57,7 +57,7 @@ export default function GeneralInformation({
           />
         </div>
         <div className="form-group">
-          <label htmlFor="linked-in">Profession:</label>
+          <label htmlFor="profession">Profession:</label>
           <input
             type="text"
             className="form-control"
@@ -87,6 +87,7 @@ export default function GeneralInformation({
             name="country"
             value={generalInformation.country}
             onChange={handleChange}
+            required={true}
           />
         </div>
         <div className="form-group">
@@ -98,6 +99,7 @@ export default function GeneralInformation({
             name="city"
             value={generalInformation.city}
             onChange={handleChange}
+            required={true}
           />
         </div>
 
