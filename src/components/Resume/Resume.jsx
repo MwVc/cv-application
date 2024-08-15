@@ -1,7 +1,7 @@
 import "./Resume.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-export default function Resume({ submittedData }) {
+export default function Resume({ submittedGeneralInformation }) {
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -13,7 +13,8 @@ export default function Resume({ submittedData }) {
               <div className="small-text">
                 <p>
                   <i className="bi bi-telephone contact-icon"></i>
-                  {submittedData && submittedData.phone}
+                  {submittedGeneralInformation &&
+                    submittedGeneralInformation.phone}
                 </p>
                 <p>
                   <i className="bi bi-envelope contact-icon"></i>
@@ -21,17 +22,19 @@ export default function Resume({ submittedData }) {
                     href="https://mail.google.com/mail/u/0/#inbox"
                     target="_blank"
                   >
-                    {submittedData && submittedData.email}
+                    {submittedGeneralInformation &&
+                      submittedGeneralInformation.email}
                   </a>
                 </p>
                 <p>
                   <i className="bi bi-geo-alt-fill contact-icon"></i>
-                  {submittedData &&
-                    `${submittedData.city}, ${submittedData.country}`}
+                  {submittedGeneralInformation &&
+                    `${submittedGeneralInformation.city}, ${submittedGeneralInformation.country}`}
                 </p>
                 <p className="last-pararaph-no-margin-bottom">
                   <i className="bi bi-person-workspace"></i>
-                  {submittedData && submittedData.linkedIn}
+                  {submittedGeneralInformation &&
+                    submittedGeneralInformation.linkedIn}
                 </p>
               </div>
             </div>
@@ -80,12 +83,16 @@ export default function Resume({ submittedData }) {
         <div className="right-panel">
           <div>
             <h1>
-              {submittedData
-                ? `${submittedData.firstName} ${submittedData.lastName}`
+              {submittedGeneralInformation
+                ? `${submittedGeneralInformation.firstName} ${submittedGeneralInformation.lastName}`
                 : "Your Name"}
             </h1>
             <div className="small-text">
-              <h3>{submittedData ? submittedData.profession : "Profession"}</h3>
+              <h3>
+                {submittedGeneralInformation
+                  ? submittedGeneralInformation.profession
+                  : "Profession"}
+              </h3>
             </div>
           </div>
           <div>

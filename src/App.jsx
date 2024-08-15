@@ -13,7 +13,8 @@ function App() {
     country: "",
     profession: "",
   });
-  const [submittedData, setSubmittedData] = useState(null);
+  const [submittedGeneralInformation, setSubmittedGeneralInformation] =
+    useState(null);
 
   return (
     <>
@@ -24,13 +25,13 @@ function App() {
               <Form
                 generalInformation={generalInformation}
                 setGeneralInformation={setGeneralInformation}
-                submittedData={submittedData}
-                setSubmittedData={setSubmittedData}
+                submittedGeneralInformation={submittedGeneralInformation}
+                setSubmittedGeneralInformation={setSubmittedGeneralInformation}
               />
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
-            <Resume submittedData={submittedData} />
+            <Resume submittedGeneralInformation={submittedGeneralInformation} />
           </div>
         </div>
       </div>
