@@ -5,9 +5,9 @@ import Accordion from "react-bootstrap/Accordion";
 
 export default function Form({
   generalInformation,
-  submittedData,
+  submittedGeneralInformation,
   setGeneralInformation,
-  setSubmittedData,
+  setSubmittedGeneralInformation,
 }) {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -17,8 +17,8 @@ export default function Form({
           <GeneralInformation
             generalInformation={generalInformation}
             setGeneralInformation={setGeneralInformation}
-            submittedData={submittedData}
-            setSubmittedData={setSubmittedData}
+            submittedGeneralInformation={submittedGeneralInformation}
+            setSubmittedGeneralInformation={setSubmittedGeneralInformation}
           />
         </Accordion.Body>
       </Accordion.Item>
