@@ -10,6 +10,8 @@ export default function Form({
   setSubmittedGeneralInformation,
   educationalExperience,
   setEducationalExperience,
+  submittedEducationalExperience,
+  setSubmittedEducationalExperience,
 }) {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -30,6 +32,10 @@ export default function Form({
           <EducationalExperience
             educationalExperience={educationalExperience}
             setEducationalExperience={setEducationalExperience}
+            submittedEducationalExperience={submittedEducationalExperience}
+            setSubmittedEducationalExperience={
+              setSubmittedEducationalExperience
+            }
           />
         </Accordion.Body>
       </Accordion.Item>
