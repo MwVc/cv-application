@@ -16,6 +16,13 @@ export default function EducationalExperience({
         return submittedEducationalExperience;
       }
     });
+
+    setEducationalExperience({
+      institution: "",
+      qualification: "",
+      startYear: "",
+      endYear: "",
+    });
   }
 
   function handleDelete() {}
