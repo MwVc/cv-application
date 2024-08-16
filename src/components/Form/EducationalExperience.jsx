@@ -6,6 +6,11 @@ export default function EducationalExperience({
   submittedEducationalExperience,
   setSubmittedEducationalExperience,
 }) {
+  function handleChange(event) {
+    const { value, name } = event.target;
+    setEducationalExperience({ ...educationalExperience, [name]: value });
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -25,11 +30,11 @@ export default function EducationalExperience({
     });
   }
 
-  function handleDelete() {}
-
-  function handleChange(event) {
-    const { value, name } = event.target;
-    setEducationalExperience({ ...educationalExperience, [name]: value });
+  function handleDelete() {
+    const copyArr = [...submittedEducationalExperience];
+    console.log(copyArr);
+    copyArr.splice(-1);
+    setSubmittedEducationalExperience(copyArr);
   }
 
   return (
