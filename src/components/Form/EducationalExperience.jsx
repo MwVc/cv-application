@@ -18,6 +18,8 @@ export default function EducationalExperience({
     });
   }
 
+  function handleDelete() {}
+
   function handleChange(event) {
     const { value, name } = event.target;
     setEducationalExperience({ ...educationalExperience, [name]: value });
@@ -77,7 +79,12 @@ export default function EducationalExperience({
           <button type="submit" className="btn btn-primary w-45">
             Submit
           </button>
-          <button className="btn btn-info w-45" type="button" disabled={true}>
+          <button
+            className="btn btn-info w-45"
+            type="button"
+            disabled={submittedEducationalExperience.length === 0}
+            onClick={handleDelete}
+          >
             Delete
           </button>
         </div>
