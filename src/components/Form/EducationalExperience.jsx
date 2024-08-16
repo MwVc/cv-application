@@ -9,10 +9,13 @@ export default function EducationalExperience({
   function handleSubmit(event) {
     event.preventDefault();
 
-    setSubmittedEducationalExperience([
-      ...submittedEducationalExperience,
-      educationalExperience,
-    ]);
+    setSubmittedEducationalExperience(() => {
+      if (submittedEducationalExperience.length < 3) {
+        return [...submittedEducationalExperience, educationalExperience];
+      } else {
+        return submittedEducationalExperience;
+      }
+    });
   }
 
   function handleChange(event) {
@@ -74,12 +77,7 @@ export default function EducationalExperience({
           <button type="submit" className="btn btn-primary w-45">
             Submit
           </button>
-          <button
-            className="btn btn-info w-45"
-            type="button"
-            onClick={() => console.log("submitting")}
-            disabled={true}
-          >
+          <button className="btn btn-info w-45" type="button" disabled={true}>
             Delete
           </button>
         </div>
