@@ -23,6 +23,7 @@ export default function GeneralInformation({
       city: "",
       country: "",
       profession: "",
+      aboutMe: "",
     });
   }
 
@@ -33,7 +34,7 @@ export default function GeneralInformation({
 
   return (
     <div className="container">
-      <form action="#" onSubmit={handleSubmit}>
+      <form action="#" onSubmit={handleSubmit} method="POST">
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -114,6 +115,19 @@ export default function GeneralInformation({
             value={generalInformation.city}
             onChange={handleChange}
             required={true}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="about-me">About Me</label>
+          <textarea
+            className="form-control"
+            rows={4}
+            type="text"
+            onChange={handleChange}
+            required={true}
+            name="aboutMe"
+            id="about-me"
+            value={generalInformation.aboutMe}
           />
         </div>
 
