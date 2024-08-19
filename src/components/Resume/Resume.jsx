@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 export default function Resume({
   submittedGeneralInformation,
   submittedEducationalExperience,
+  submittedPracticalExperience,
 }) {
   return (
     <div className="page" data-size="A4">
