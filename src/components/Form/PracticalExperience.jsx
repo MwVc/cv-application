@@ -11,8 +11,10 @@ export default function PracticalExperience({
 
   function handleChange(event) {
     const { value, name } = event.target;
-    setPracticalExperience({ ...practicalExperience, [name]: value });
-    console.log(practicalExperience);
+    setPracticalExperience({
+      ...practicalExperience,
+      [name]: name == "yearsOfExperience" ? parseInt(value) : value,
+    });
   }
   return (
     <div className="container">
@@ -24,6 +26,17 @@ export default function PracticalExperience({
             className="form-control"
             onChange={handleChange}
             name="skill"
+            id="skill"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="years-of-experience">Years of Experience</label>
+          <input
+            type="number"
+            className="form-control"
+            id="years-of-experience"
+            onChange={handleChange}
+            name="yearsOfExperience"
           />
         </div>
       </form>
