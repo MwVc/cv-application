@@ -30,7 +30,7 @@ function App() {
 
   const [practicalExperience, setPracticalExperience] = useState({
     skill: "",
-    yearsOfExperience: null,
+    yearsOfExperience: "",
   });
 
   const [submittedPracticalExperience, setSubmittedPracticalExperience] =
@@ -66,6 +66,7 @@ function App() {
             <Resume
               submittedGeneralInformation={submittedGeneralInformation}
               submittedEducationalExperience={submittedEducationalExperience}
+              submittedPracticalExperience={submittedPracticalExperience}
             />
           </div>
         </div>
