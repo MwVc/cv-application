@@ -12,6 +12,7 @@ function App() {
     city: "",
     country: "",
     profession: "",
+    aboutMe: "",
   });
 
   const [submittedGeneralInformation, setSubmittedGeneralInformation] =
