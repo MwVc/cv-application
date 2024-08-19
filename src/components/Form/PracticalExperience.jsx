@@ -6,7 +6,15 @@ export default function PracticalExperience({
 }) {
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Submitted");
+
+    setSubmittedPracticalExperience(() => {
+      if (submittedPracticalExperience.length < 3) {
+        return [...submittedPracticalExperience, practicalExperience];
+      } else {
+        return submittedPracticalExperience;
+      }
+    });
+    setPracticalExperience({ skill: "", yearsOfExperience: "" });
   }
 
   function handleChange(event) {
@@ -15,6 +23,10 @@ export default function PracticalExperience({
       ...practicalExperience,
       [name]: name == "yearsOfExperience" ? parseInt(value) : value,
     });
+  }
+
+  function handleDelete() {
+    console.log("Handling Delete");
   }
   return (
     <div className="container">
@@ -27,6 +39,7 @@ export default function PracticalExperience({
             onChange={handleChange}
             name="skill"
             id="skill"
+            value={practicalExperience.skill}
           />
         </div>
         <div className="form-group">
@@ -37,7 +50,21 @@ export default function PracticalExperience({
             id="years-of-experience"
             onChange={handleChange}
             name="yearsOfExperience"
+            value={practicalExperience.yearsOfExperience}
           />
+        </div>
+        <div className="d-flex justify-content-between">
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+          <button
+            type="button"
+            className="btn btn-info"
+            onClick={handleDelete}
+            disabled={submittedPracticalExperience.length === 0}
+          >
+            Delete Skill
+          </button>
         </div>
       </form>
     </div>
