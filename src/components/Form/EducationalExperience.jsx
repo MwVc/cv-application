@@ -32,7 +32,6 @@ export default function EducationalExperience({
 
   function handleDelete() {
     const copyArr = [...submittedEducationalExperience];
-    console.log(copyArr);
     copyArr.splice(-1);
     setSubmittedEducationalExperience(copyArr);
   }
