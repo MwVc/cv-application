@@ -39,7 +39,7 @@ export default function EducationalExperience({
 
   return (
     <div className="container">
-      <form action="#" onSubmit={handleSubmit}>
+      <form action="#" onSubmit={handleSubmit} method="POST">
         <div className="form-group">
           <label htmlFor="institution">Name of Institution:</label>
           <input
