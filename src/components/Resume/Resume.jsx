@@ -107,16 +107,9 @@ export default function Resume({
             <h2>About Me</h2>
             <div className="small-text">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Maiores ducimus modi nihil, quos hic qui eum dolorem ipsam odit
-                amet expedita? Consequuntur sit, alias eveniet, rerum soluta,
-                iste quod atque dolore maiores repellendus aut quidem voluptatum
-                dolores! Consectetur corporis sit ipsa ipsum exercitationem
-                minus qui non, labore asperiores at dolorem.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quisquam, dolor.
+                {submittedGeneralInformation
+                  ? submittedGeneralInformation.aboutMe
+                  : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod obcaecati fugiat in dignissimos error, quo, natus ipsam ipsum numquam iure placeat voluptatum iusto laudantium nesciunt nihil sit pariatur modi sunt ullam accusantium porro! Necessitatibus maxime, sunt reprehenderit autem dolore corrupti, accusantium deleniti maiores ipsam, aspernatur repellendus mollitia illo recusandae odit."}
               </p>
             </div>
           </div>
