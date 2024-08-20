@@ -26,7 +26,9 @@ export default function PracticalExperience({
   }
 
   function handleDelete() {
-    console.log("Handling Delete");
+    const copyArr = [...submittedPracticalExperience];
+    copyArr.splice(-1);
+    setSubmittedPracticalExperience(submittedPracticalExperience);
   }
   return (
     <div className="container">
