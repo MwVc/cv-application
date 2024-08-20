@@ -29,7 +29,6 @@ export default function PracticalExperience({
     const copyArr = [...submittedPracticalExperience];
     copyArr.splice(-1);
     setSubmittedPracticalExperience(copyArr);
-    console.log(copyArr);
   }
   return (
     <div className="container">
