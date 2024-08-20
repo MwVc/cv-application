@@ -16,6 +16,10 @@ export default function Form({
   setPracticalExperience,
   submittedPracticalExperience,
   setSubmittedPracticalExperience,
+  workExperience,
+  setWorkExperience,
+  submittedWorkExperience,
+  setSubmittedWorkExperience,
 }) {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -51,6 +55,17 @@ export default function Form({
             setPracticalExperience={setPracticalExperience}
             submittedPracticalExperience={submittedPracticalExperience}
             setSubmittedPracticalExperience={setSubmittedPracticalExperience}
+          />
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
+        <Accordion.Header>Work Experience</Accordion.Header>
+        <Accordion.Body>
+          <WorkExperience
+            workExperience={workExperience}
+            setWorkExperience={setWorkExperience}
+            submittedWorkExperience={submittedWorkExperience}
+            setSubmittedWorkExperience={setSubmittedWorkExperience}
           />
         </Accordion.Body>
       </Accordion.Item>
