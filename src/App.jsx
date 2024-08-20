@@ -36,6 +36,16 @@ function App() {
   const [submittedPracticalExperience, setSubmittedPracticalExperience] =
     useState([]);
 
+  const [workExperience, setWorkExperience] = useState({
+    jobTitle: "",
+    jobDescription: "",
+    compayName: "",
+    startDate: "",
+    endDate: "",
+  });
+
+  const [submittedWorkExperience, setSubmittedWorkExperience] = useState([]);
+
   return (
     <>
       <div className="container">
@@ -59,6 +69,10 @@ function App() {
                 setSubmittedPracticalExperience={
                   setSubmittedPracticalExperience
                 }
+                workExperience={workExperience}
+                setWorkExperience={setWorkExperience}
+                submittedWorkExperience={submittedWorkExperience}
+                setSubmittedWorkExperience={setSubmittedWorkExperience}
               />
             </section>
           </div>
@@ -67,6 +81,7 @@ function App() {
               submittedGeneralInformation={submittedGeneralInformation}
               submittedEducationalExperience={submittedEducationalExperience}
               submittedPracticalExperience={submittedPracticalExperience}
+              submittedWorkExperience={submmittedWorkExperience}
             />
           </div>
         </div>
