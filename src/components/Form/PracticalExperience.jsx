@@ -53,6 +53,7 @@ export default function PracticalExperience({
             onChange={handleChange}
             name="yearsOfExperience"
             value={practicalExperience.yearsOfExperience}
+            min={0}
           />
         </div>
         <div className="d-flex justify-content-between">
