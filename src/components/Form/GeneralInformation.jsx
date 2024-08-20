@@ -45,6 +45,7 @@ export default function GeneralInformation({
             name="firstName"
             id="firstName"
             onChange={handleChange}
+            placeholder="e.g John"
           />
         </div>
         <div className="form-group">
@@ -57,6 +58,7 @@ export default function GeneralInformation({
             name="lastName"
             id="lastName"
             onChange={handleChange}
+            placeholder="e.g Doe"
           />
         </div>
         <div className="form-group">
@@ -69,6 +71,7 @@ export default function GeneralInformation({
             value={generalInformation.email}
             name="email"
             onChange={handleChange}
+            placeholder="e.g doejohn@anonymous.com"
           />
         </div>
         <div className="form-group">
@@ -80,6 +83,7 @@ export default function GeneralInformation({
             value={generalInformation.linkedIn}
             name="profession"
             onChange={handleChange}
+            placeholder="e.g Software Engineer"
           />
         </div>
         <div className="form-group">
@@ -103,6 +107,7 @@ export default function GeneralInformation({
             value={generalInformation.country}
             onChange={handleChange}
             required={true}
+            placeholder="e.g Russia"
           />
         </div>
         <div className="form-group">
@@ -115,6 +120,7 @@ export default function GeneralInformation({
             value={generalInformation.city}
             onChange={handleChange}
             required={true}
+            placeholder="e.g Yakutsk"
           />
         </div>
         <div className="form-group">
@@ -128,6 +134,7 @@ export default function GeneralInformation({
             name="aboutMe"
             id="about-me"
             value={generalInformation.aboutMe}
+            placeholder="This is where my witty bio would be if I had one."
           />
         </div>
 

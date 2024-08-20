@@ -49,6 +49,7 @@ export default function EducationalExperience({
             name="institution"
             id="institution"
             value={educationalExperience.institution}
+            placeholder="e.g The American University in Cairo"
           />
         </div>
         <div className="form-group">
@@ -61,6 +62,7 @@ export default function EducationalExperience({
             name="qualification"
             id="qualification"
             value={educationalExperience.qualification}
+            placeholder="e.g Bsc. Art History"
           />
         </div>
         <div className="form-group">
@@ -73,6 +75,7 @@ export default function EducationalExperience({
             name="startYear"
             id="start-year"
             value={educationalExperience.startYear}
+            placeholder="e.g 1919"
           />
         </div>
         <div className="form-group">
@@ -84,6 +87,7 @@ export default function EducationalExperience({
             name="endYear"
             id="end-year"
             value={educationalExperience.endYear}
+            placeholder="e.g 2024"
           />
         </div>
         <div className="d-flex justify-content-between">

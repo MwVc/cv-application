@@ -87,7 +87,7 @@ export default function Resume({
                             {object.yearsOfExperience}
                           </span>
                           <span className="align-left">
-                            {object.yearsOfExperience > 1 ? "Years" : "Year"}
+                            {object.yearsOfExperience === 1 ? "Year" : "Years"}
                           </span>
                         </div>
                       </div>
