@@ -120,7 +120,8 @@ export default function Resume({
             </h1>
             <div className="small-text">
               <h3>
-                {submittedGeneralInformation
+                {submittedGeneralInformation &&
+                submittedGeneralInformation.profession
                   ? submittedGeneralInformation.profession
                   : "Profession"}
               </h3>
