@@ -6,7 +6,6 @@ export default function Resume({
   submittedEducationalExperience,
   submittedPracticalExperience,
 }) {
-  console.log(submittedPracticalExperience);
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -46,23 +45,55 @@ export default function Resume({
             <div className="item bottom-line-separator">
               <h2>SKILLS</h2>
               <div className="small-text">
-                {submittedPracticalExperience.map((object, index) => {
-                  return (
-                    <div className="skill" id={index}>
+                {submittedPracticalExperience.length === 0 ? (
+                  <div>
+                    <div className="skill">
                       <div>
-                        <span>{object.skill}</span>
+                        <span>Skill 1</span>
                       </div>
                       <div className="years-of-experience">
-                        <span className="align-right">
-                          {object.yearsOfExperience}
-                        </span>
-                        <span className="align-left">
-                          {object.yearsOfExperience > 1 ? "Years" : "Year"}
-                        </span>
+                        <span className="align-right">#</span>
+                        <span className="align-left">Years</span>
                       </div>
                     </div>
-                  );
-                })}
+                    <div className="skill">
+                      <div>
+                        <span>Skill 1</span>
+                      </div>
+                      <div className="years-of-experience">
+                        <span className="align-right">#</span>
+                        <span className="align-left">Years</span>
+                      </div>
+                    </div>
+                    <div className="skill">
+                      <div>
+                        <span>Skill 1</span>
+                      </div>
+                      <div className="years-of-experience">
+                        <span className="align-right">#</span>
+                        <span className="align-left">Years</span>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  submittedPracticalExperience.map((object, index) => {
+                    return (
+                      <div className="skill" key={index}>
+                        <div>
+                          <span>{object.skill}</span>
+                        </div>
+                        <div className="years-of-experience">
+                          <span className="align-right">
+                            {object.yearsOfExperience}
+                          </span>
+                          <span className="align-left">
+                            {object.yearsOfExperience > 1 ? "Years" : "Year"}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })
+                )}
               </div>
             </div>
             <div className="item">
