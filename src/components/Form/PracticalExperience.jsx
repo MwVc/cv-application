@@ -43,6 +43,7 @@ export default function PracticalExperience({
             id="skill"
             value={practicalExperience.skill}
             placeholder="e.g HTML"
+            required={true}
           />
         </div>
         <div className="form-group">
