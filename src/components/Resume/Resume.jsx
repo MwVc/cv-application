@@ -87,7 +87,11 @@ export default function Resume({
                             {object.yearsOfExperience}
                           </span>
                           <span className="align-left">
-                            {object.yearsOfExperience === 1 ? "Year" : "Years"}
+                            {object.yearsOfExperience < 1
+                              ? ""
+                              : object.yearsOfExperience === 1
+                              ? "Year"
+                              : "Years"}
                           </span>
                         </div>
                       </div>
@@ -146,7 +150,7 @@ export default function Resume({
                   <span>Jun 2014 - Sept 2015</span>
                 </div>
                 <div className="project-name bolded">
-                  <span>Project name | Company name</span>
+                  <span>Company name</span>
                   <p className="work-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis, ut ipsum consequatur ad fuga, atque repellat
@@ -164,7 +168,7 @@ export default function Resume({
                   <span>Nov 2020 - Sept 2021</span>
                 </div>
                 <div className="project-name bolded">
-                  <span>Project Name | Company name</span>
+                  <span>Company name</span>
                   <p className="work-description">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Quod obcaecati fugiat in dignissimos error, quo, natus ipsam
@@ -182,7 +186,7 @@ export default function Resume({
                   <span>2016 - 2018</span>
                 </div>
                 <div className="project-name bolded">
-                  <span>Project Name | Company name</span>
+                  <span>Company name</span>
                   <p className="work-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Exercitationem nemo itaque dignissimos voluptates sunt
@@ -219,6 +223,19 @@ export default function Resume({
                 <div>
                   <div className="project-name bolded">
                     <span className="bolded">Restaurant Page</span>
+                    <p className="work-description">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quam quod ipsa laborum, nesciunt molestias eveniet
+                      exercitationem. Beatae debitis, aperiam, ullam itaque id
+                      architecto officia at eos, commodi aliquam molestias qui?
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <div className="project-name bolded">
+                    <span className="bolded">CV Application</span>
                     <p className="work-description">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Quam quod ipsa laborum, nesciunt molestias eveniet
