@@ -8,7 +8,7 @@ export default function PracticalExperience({
     event.preventDefault();
 
     setSubmittedPracticalExperience(() => {
-      if (submittedPracticalExperience.length < 3) {
+      if (submittedPracticalExperience.length < 9) {
         return [...submittedPracticalExperience, practicalExperience];
       } else {
         return submittedPracticalExperience;
@@ -62,7 +62,7 @@ export default function PracticalExperience({
           <button
             type="submit"
             className="btn btn-primary"
-            disabled={submittedPracticalExperience.length === 3}
+            disabled={submittedPracticalExperience.length === 9}
           >
             Submit
           </button>
