@@ -81,7 +81,7 @@ function App() {
               submittedGeneralInformation={submittedGeneralInformation}
               submittedEducationalExperience={submittedEducationalExperience}
               submittedPracticalExperience={submittedPracticalExperience}
-              submittedWorkExperience={submmittedWorkExperience}
+              submittedWorkExperience={submittedWorkExperience}
             />
           </div>
         </div>
