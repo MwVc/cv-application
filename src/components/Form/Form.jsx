@@ -1,6 +1,7 @@
 import GeneralInformation from "./GeneralInformation";
 import EducationalExperience from "./EducationalExperience";
 import PracticalExperience from "./PracticalExperience";
+import WorkExperience from "./WorkExperience";
 import Accordion from "react-bootstrap/Accordion";
 
 export default function Form({
