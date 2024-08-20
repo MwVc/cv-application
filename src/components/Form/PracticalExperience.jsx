@@ -28,7 +28,8 @@ export default function PracticalExperience({
   function handleDelete() {
     const copyArr = [...submittedPracticalExperience];
     copyArr.splice(-1);
-    setSubmittedPracticalExperience(submittedPracticalExperience);
+    setSubmittedPracticalExperience(copyArr);
+    console.log(copyArr);
   }
   return (
     <div className="container">
@@ -56,7 +57,11 @@ export default function PracticalExperience({
           />
         </div>
         <div className="d-flex justify-content-between">
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={submittedPracticalExperience.length === 3}
+          >
             Submit
           </button>
           <button
