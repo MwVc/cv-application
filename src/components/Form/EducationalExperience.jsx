@@ -91,7 +91,11 @@ export default function EducationalExperience({
           />
         </div>
         <div className="d-flex justify-content-between">
-          <button type="submit" className="btn btn-primary w-45">
+          <button
+            type="submit"
+            className="btn btn-primary w-45"
+            disabled={submittedEducationalExperience.length === 3}
+          >
             Submit
           </button>
           <button
