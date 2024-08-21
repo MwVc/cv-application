@@ -1,15 +1,26 @@
 export default function WorkExperience({
   workExperience,
-  setWorkExperince,
+  setWorkExperience,
   submittedWorkExperience,
   setSubmittedWorkExperience,
 }) {
-  function handleSubmit() {
-    console.log("Submitting Form");
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmittedWorkExperience(workExperience);
+    setWorkExperience({
+      jobTitle: "",
+      jobDescription: "",
+      companyName: "",
+      startDate: "",
+      endDate: "",
+    });
   }
-  function handleChange() {
-    console.log("Handling change");
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setWorkExperience({ ...workExperience, [name]: value });
   }
+
   function handleDelete() {
     console.log("Deleting");
   }
