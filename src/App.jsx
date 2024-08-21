@@ -39,7 +39,7 @@ function App() {
   const [workExperience, setWorkExperience] = useState({
     jobTitle: "",
     jobDescription: "",
-    compayName: "",
+    companyName: "",
     startDate: "",
     endDate: "",
   });
