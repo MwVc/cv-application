@@ -5,7 +5,9 @@ export default function Resume({
   submittedGeneralInformation,
   submittedEducationalExperience,
   submittedPracticalExperience,
+  submittedWorkExperience,
 }) {
+  console.log(submittedWorkExperience);
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -144,63 +146,95 @@ export default function Resume({
           <div className="work-experience">
             <h2>Work Experience</h2>
             <ul>
-              <li>
-                <div className="job-position">
-                  <span className="bolded">Accountant</span>
-                  <span>Jun 2014 - Sept 2015</span>
+              {submittedWorkExperience.length === 0 ? (
+                <div>
+                  <li>
+                    <div className="job-position">
+                      <span className="bolded">Digital Marketing Expert</span>
+                      <span>Nov 2020 - Sept 2021</span>
+                    </div>
+                    <div className="project-name bolded">
+                      <span>Company name</span>
+                      <p className="work-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Quod obcaecati fugiat in dignissimos error, quo,
+                        natus ipsam ipsum numquam iure placeat voluptatum iusto
+                        laudantium nesciunt nihil sit pariatur modi sunt ullam
+                        accusantium porro! Necessitatibus maxime, sunt
+                        reprehenderit autem dolore corrupti, accusantium
+                        deleniti maiores ipsam, aspernatur repellendus mollitia
+                        illo recusandae odit.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="job-position">
+                      <span className="bolded">Lidar Annotation</span>
+                      <span>2016 - 2018</span>
+                    </div>
+                    <div className="project-name bolded">
+                      <span>Company name</span>
+                      <p className="work-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Exercitationem nemo itaque dignissimos voluptates sunt
+                        quidem molestiae ut maiores? Exercitationem fugiat nobis
+                        eaque dolorum expedita distinctio dolores nulla deserunt
+                        rerum. Consectetur ea ad debitis corporis voluptatum
+                        tenetur voluptas accusamus suscipit aut soluta
+                        necessitatibus quaerat enim possimus ratione ullam in
+                        magni, quos perspiciatis hic incidunt fugit vero rem
+                        obcaecati? Totam hic maiores laudantium iusto magnam,
+                        sed accusantium adipisci! Nesciunt, sit. Nobis, vel!
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="job-position">
+                      <span className="bolded">Lidar Annotation</span>
+                      <span>2016 - 2018</span>
+                    </div>
+                    <div className="project-name bolded">
+                      <span>Company name</span>
+                      <p className="work-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Exercitationem nemo itaque dignissimos voluptates sunt
+                        quidem molestiae ut maiores? Exercitationem fugiat nobis
+                        eaque dolorum expedita distinctio dolores nulla deserunt
+                        rerum. Consectetur ea ad debitis corporis voluptatum
+                        tenetur voluptas accusamus suscipit aut soluta
+                        necessitatibus quaerat enim possimus ratione ullam in
+                        magni, quos perspiciatis hic incidunt fugit vero rem
+                        obcaecati? Totam hic maiores laudantium iusto magnam,
+                        sed accusantium adipisci! Nesciunt, sit. Nobis, vel!
+                      </p>
+                    </div>
+                  </li>
                 </div>
-                <div className="project-name bolded">
-                  <span>Company name</span>
-                  <p className="work-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis, ut ipsum consequatur ad fuga, atque repellat
-                    tempore quia labore maxime voluptatum, iste molestiae
-                    aliquam neque placeat? Doloribus cupiditate repudiandae unde
-                    magni ipsam nemo natus vitae incidunt iusto vero rem
-                    consectetur, odit hic sit temporibus maxime quae, saepe in
-                    aliquam! Nulla?
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div className="job-position">
-                  <span className="bolded">Digital Marketing Expert</span>
-                  <span>Nov 2020 - Sept 2021</span>
-                </div>
-                <div className="project-name bolded">
-                  <span>Company name</span>
-                  <p className="work-description">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quod obcaecati fugiat in dignissimos error, quo, natus ipsam
-                    ipsum numquam iure placeat voluptatum iusto laudantium
-                    nesciunt nihil sit pariatur modi sunt ullam accusantium
-                    porro! Necessitatibus maxime, sunt reprehenderit autem
-                    dolore corrupti, accusantium deleniti maiores ipsam,
-                    aspernatur repellendus mollitia illo recusandae odit.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div className="job-position">
-                  <span className="bolded">Lidar Annotation</span>
-                  <span>2016 - 2018</span>
-                </div>
-                <div className="project-name bolded">
-                  <span>Company name</span>
-                  <p className="work-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem nemo itaque dignissimos voluptates sunt
-                    quidem molestiae ut maiores? Exercitationem fugiat nobis
-                    eaque dolorum expedita distinctio dolores nulla deserunt
-                    rerum. Consectetur ea ad debitis corporis voluptatum tenetur
-                    voluptas accusamus suscipit aut soluta necessitatibus
-                    quaerat enim possimus ratione ullam in magni, quos
-                    perspiciatis hic incidunt fugit vero rem obcaecati? Totam
-                    hic maiores laudantium iusto magnam, sed accusantium
-                    adipisci! Nesciunt, sit. Nobis, vel!
-                  </p>
-                </div>
-              </li>
+              ) : (
+                submittedWorkExperience.map((object, index) => {
+                  <li>
+                    <div className="job-position">
+                      <span className="bolded">Lidar Annotation</span>
+                      <span>2016 - 2018</span>
+                    </div>
+                    <div className="project-name bolded">
+                      <span>Company name</span>
+                      <p className="work-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Exercitationem nemo itaque dignissimos voluptates sunt
+                        quidem molestiae ut maiores? Exercitationem fugiat nobis
+                        eaque dolorum expedita distinctio dolores nulla deserunt
+                        rerum. Consectetur ea ad debitis corporis voluptatum
+                        tenetur voluptas accusamus suscipit aut soluta
+                        necessitatibus quaerat enim possimus ratione ullam in
+                        magni, quos perspiciatis hic incidunt fugit vero rem
+                        obcaecati? Totam hic maiores laudantium iusto magnam,
+                        sed accusantium adipisci! Nesciunt, sit. Nobis, vel!
+                      </p>
+                    </div>
+                  </li>;
+                })
+              )}
             </ul>
           </div>
           <div className="work-experience">
