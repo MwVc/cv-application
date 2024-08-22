@@ -6,7 +6,7 @@ export default function WorkExperience({
 }) {
   function handleSubmit(event) {
     event.preventDefault();
-    setSubmittedWorkExperience(workExperience);
+    setSubmittedWorkExperience([...submittedWorkExperience, workExperience]);
     setWorkExperience({
       jobTitle: "",
       jobDescription: "",
