@@ -22,7 +22,9 @@ export default function WorkExperience({
   }
 
   function handleDelete() {
-    console.log("Deleting");
+    const copyArr = [...submittedWorkExperience];
+    copyArr.splice(-1);
+    setSubmittedWorkExperience(copyArr);
   }
   return (
     <div className="container">
