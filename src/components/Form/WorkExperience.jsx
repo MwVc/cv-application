@@ -66,7 +66,7 @@ export default function WorkExperience({
           ></textarea>
         </div>
         <div className="form-group">
-          <label htmlFor="start-date">Satrted:</label>
+          <label htmlFor="start-date">Sarted:</label>
           <input
             type="text"
             name="startDate"
@@ -78,7 +78,7 @@ export default function WorkExperience({
           />
         </div>
         <div className="form-group">
-          <label htmlFor="end-date">Satrted:</label>
+          <label htmlFor="end-date">Ended:</label>
           <input
             type="text"
             name="endDate"
