@@ -7,7 +7,6 @@ export default function Resume({
   submittedPracticalExperience,
   submittedWorkExperience,
 }) {
-  console.log(submittedWorkExperience);
   return (
     <div className="page" data-size="A4">
       <div className="box">
@@ -211,29 +210,20 @@ export default function Resume({
                   </li>
                 </div>
               ) : (
-                submittedWorkExperience.map((object, index) => {
-                  <li>
+                submittedWorkExperience.map((object, index) => (
+                  <li key={index}>
                     <div className="job-position">
-                      <span className="bolded">Lidar Annotation</span>
-                      <span>2016 - 2018</span>
+                      <span className="bolded">{object.jobTitle}</span>
+                      <span>{`${object.startDate} - ${object.endDate}`}</span>
                     </div>
                     <div className="project-name bolded">
-                      <span>Company name</span>
+                      <span>{object.companyName}</span>
                       <p className="work-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Exercitationem nemo itaque dignissimos voluptates sunt
-                        quidem molestiae ut maiores? Exercitationem fugiat nobis
-                        eaque dolorum expedita distinctio dolores nulla deserunt
-                        rerum. Consectetur ea ad debitis corporis voluptatum
-                        tenetur voluptas accusamus suscipit aut soluta
-                        necessitatibus quaerat enim possimus ratione ullam in
-                        magni, quos perspiciatis hic incidunt fugit vero rem
-                        obcaecati? Totam hic maiores laudantium iusto magnam,
-                        sed accusantium adipisci! Nesciunt, sit. Nobis, vel!
+                        {object.jobDescription}
                       </p>
                     </div>
-                  </li>;
-                })
+                  </li>
+                ))
               )}
             </ul>
           </div>
