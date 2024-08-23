@@ -1,6 +1,7 @@
 import GeneralInformation from "./GeneralInformation";
 import EducationalExperience from "./EducationalExperience";
 import PracticalExperience from "./PracticalExperience";
+import Projects from "./Projects";
 import WorkExperience from "./WorkExperience";
 import Accordion from "react-bootstrap/Accordion";
 
@@ -21,6 +22,10 @@ export default function Form({
   setWorkExperience,
   submittedWorkExperience,
   setSubmittedWorkExperience,
+  project,
+  setProject,
+  submittedProjects,
+  setSubmittedProjects,
 }) {
   return (
     <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -67,6 +72,17 @@ export default function Form({
             setWorkExperience={setWorkExperience}
             submittedWorkExperience={submittedWorkExperience}
             setSubmittedWorkExperience={setSubmittedWorkExperience}
+          />
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="4">
+        <Accordion.Header>Projects</Accordion.Header>
+        <Accordion.Body>
+          <Projects
+            project={project}
+            setProject={setProject}
+            submittedProjects={submittedProjects}
+            setSubmittedProjects={setSubmittedProjects}
           />
         </Accordion.Body>
       </Accordion.Item>
