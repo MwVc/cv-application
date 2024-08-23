@@ -46,6 +46,13 @@ function App() {
 
   const [submittedWorkExperience, setSubmittedWorkExperience] = useState([]);
 
+  const [project, setProject] = useState({
+    projectName: "",
+    projectDescription: "",
+  });
+
+  const [submittedProjects, setSubmittedProjects] = useState([]);
+
   return (
     <>
       <div className="container">
@@ -73,6 +80,10 @@ function App() {
                 setWorkExperience={setWorkExperience}
                 submittedWorkExperience={submittedWorkExperience}
                 setSubmittedWorkExperience={setSubmittedWorkExperience}
+                project={project}
+                setProject={setProject}
+                submittedProjects={submittedProjects}
+                setSubmittedProjects={setSubmittedProjects}
               />
             </section>
           </div>
