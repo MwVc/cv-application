@@ -93,6 +93,7 @@ function App() {
               submittedEducationalExperience={submittedEducationalExperience}
               submittedPracticalExperience={submittedPracticalExperience}
               submittedWorkExperience={submittedWorkExperience}
+              submittedProjects={submittedProjects}
             />
           </div>
         </div>
