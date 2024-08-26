@@ -6,6 +6,11 @@ export default function Projects({
 }) {
   function handleSubmit(event) {
     event.preventDefault();
+    setSubmittedProjects([...submittedProjects, project]);
+    setProject({
+      projectName: "",
+      projectDescription: "",
+    });
   }
 
   function handleChange(event) {
