@@ -6,6 +6,7 @@ export default function Resume({
   submittedEducationalExperience,
   submittedPracticalExperience,
   submittedWorkExperience,
+  submittedProjects,
 }) {
   return (
     <div className="page" data-size="A4">
@@ -230,45 +231,65 @@ export default function Resume({
           <div className="work-experience">
             <h2>Projects</h2>
             <ul>
-              <li>
-                <div>
-                  <div className="project-name bolded">
-                    <span className="bolded">Weather App</span>
-                    <p className="work-description">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quam quod ipsa laborum, nesciunt molestias eveniet
-                      exercitationem. Beatae debitis, aperiam, ullam itaque id
-                      architecto officia at eos, commodi aliquam molestias qui?
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div className="project-name bolded">
-                    <span className="bolded">Restaurant Page</span>
-                    <p className="work-description">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quam quod ipsa laborum, nesciunt molestias eveniet
-                      exercitationem. Beatae debitis, aperiam, ullam itaque id
-                      architecto officia at eos, commodi aliquam molestias qui?
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <div className="project-name bolded">
-                    <span className="bolded">CV Application</span>
-                    <p className="work-description">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Quam quod ipsa laborum, nesciunt molestias eveniet
-                      exercitationem. Beatae debitis, aperiam, ullam itaque id
-                      architecto officia at eos, commodi aliquam molestias qui?
-                    </p>
-                  </div>
-                </div>
-              </li>
+              {submittedProjects.length === 0 ? (
+                <>
+                  <li>
+                    <div>
+                      <div className="project-name bolded">
+                        <span className="bolded">Weather App</span>
+                        <p className="work-description">
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Quam quod ipsa laborum, nesciunt molestias
+                          eveniet exercitationem. Beatae debitis, aperiam, ullam
+                          itaque id architecto officia at eos, commodi aliquam
+                          molestias qui?
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div className="project-name bolded">
+                        <span className="bolded">Restaurant Page</span>
+                        <p className="work-description">
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Quam quod ipsa laborum, nesciunt molestias
+                          eveniet exercitationem. Beatae debitis, aperiam, ullam
+                          itaque id architecto officia at eos, commodi aliquam
+                          molestias qui?
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <div className="project-name bolded">
+                        <span className="bolded">CV Application</span>
+                        <p className="work-description">
+                          Lorem ipsum, dolor sit amet consectetur adipisicing
+                          elit. Quam quod ipsa laborum, nesciunt molestias
+                          eveniet exercitationem. Beatae debitis, aperiam, ullam
+                          itaque id architecto officia at eos, commodi aliquam
+                          molestias qui?
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </>
+              ) : (
+                submittedProjects.map((object, index) => (
+                  <li key={index}>
+                    <div>
+                      <div className="project-name bolded">
+                        <span className="bolded">{object.projectName}</span>
+                        <p className="work-description">
+                          {object.projectDescription}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                ))
+              )}
             </ul>
           </div>
         </div>
