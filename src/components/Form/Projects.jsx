@@ -36,6 +36,7 @@ export default function Projects({
             required={true}
             onChange={handleChange}
             placeholder="e.g Hello World"
+            value={project.projectName}
           />
         </div>
         <div className="form-group">
@@ -49,6 +50,7 @@ export default function Projects({
             onChange={handleChange}
             placeholder='e.g In this groundbreaking project, I boldly explored the depths of human-computer interaction by teaching a machine to greet the world. Yes, I taught it to say, "Hello, World!" This involved complex tasks like mastering the syntax of a programming language and strategically placing parentheses and semicolons. The project was a resounding success, with the program greeting the world flawlessly every time it was run.'
             rows={9}
+            value={project.projectDescription}
           ></textarea>
         </div>
         <div className="d-flex justify-content-between">
