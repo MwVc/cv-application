@@ -60,11 +60,12 @@ export default function WorkExperience({
           <textarea
             name="jobDescription"
             id="job-description"
-            rows={3}
+            rows={6}
             className="form-control"
             onChange={handleChange}
             required={true}
             value={workExperience.jobDescription}
+            placeholder="e.g  Responsible for overseeing the development of tunneling machines that are faster, safer, and more efficient than anything that came before. Also tasked with preventing these machines from accidentally digging up ancient artifacts or causing traffic jams."
           ></textarea>
         </div>
         <div className="form-group">
@@ -77,6 +78,7 @@ export default function WorkExperience({
             onChange={handleChange}
             required={true}
             value={workExperience.startDate}
+            placeholder="e.g Nov 1640 "
           />
         </div>
         <div className="form-group">
@@ -89,6 +91,7 @@ export default function WorkExperience({
             onChange={handleChange}
             required={true}
             value={workExperience.endDate}
+            placeholder="e.g Present"
           />
         </div>
         <div className="d-flex justify-content-between">
