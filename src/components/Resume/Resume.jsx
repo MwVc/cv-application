@@ -32,15 +32,10 @@ export default function Resume({
                       submittedGeneralInformation.email}
                   </a>
                 </p>
-                <p>
+                <p className="last-pararaph-no-margin-bottom">
                   <i className="bi bi-geo-alt-fill contact-icon"></i>
                   {submittedGeneralInformation &&
                     `${submittedGeneralInformation.city}, ${submittedGeneralInformation.country}`}
-                </p>
-                <p className="last-pararaph-no-margin-bottom">
-                  <i className="bi bi-person-workspace"></i>
-                  {submittedGeneralInformation &&
-                    submittedGeneralInformation.linkedIn}
                 </p>
               </div>
             </div>
@@ -51,7 +46,7 @@ export default function Resume({
                   <div>
                     <div className="skill">
                       <div>
-                        <span>Skill 1</span>
+                        <span>Skill</span>
                       </div>
                       <div className="years-of-experience">
                         <span className="align-right">#</span>
@@ -60,7 +55,7 @@ export default function Resume({
                     </div>
                     <div className="skill">
                       <div>
-                        <span>Skill 1</span>
+                        <span>Skill</span>
                       </div>
                       <div className="years-of-experience">
                         <span className="align-right">#</span>
@@ -69,7 +64,7 @@ export default function Resume({
                     </div>
                     <div className="skill">
                       <div>
-                        <span>Skill 1</span>
+                        <span>Skill</span>
                       </div>
                       <div className="years-of-experience">
                         <span className="align-right">#</span>
