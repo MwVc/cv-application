@@ -1,9 +1,9 @@
-import { html2pdf } from "html2pdf.js";
+import html2pdf from "html2pdf.js";
 
 function generatePDF() {
   const element = document.querySelector(".page");
-  const pdfOptions = {
-    margin: -7,
+  const options = {
+    margin: -0.1,
     filename: "my-cv.pdf",
     image: {
       type: "jpeg",
@@ -15,16 +15,21 @@ function generatePDF() {
       letterRendering: true,
       useCORS: true,
     },
-    jsPDF: { unit: "mm", format: "a4", oreintation: "potrait" },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   };
-
-  html2pdf().set(pdfOptions).from(element).save();
+  html2pdf().set(options).from(element).save();
 }
 
 export default function DownloadPDF() {
   return (
     <div>
-      <button className="btn btn-primary" onClick={generatePDF}>
+      <button
+        className="btn btn-primary"
+        onClick={generatePDF}
+        style={{
+          marginTop: "2rem",
+        }}
+      >
         Download CV
       </button>
     </div>
