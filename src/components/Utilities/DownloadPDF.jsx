@@ -1,6 +1,6 @@
 import { html2pdf } from "html2pdf.js";
 
-export default function DownloadPDF() {
+function generatePDF() {
   const element = document.querySelector(".page");
   const pdfOptions = {
     margin: -7,
@@ -17,9 +17,16 @@ export default function DownloadPDF() {
     },
     jsPDF: { unit: "mm", format: "a4", oreintation: "potrait" },
   };
+
+  html2pdf().set(pdfOptions).from(element).save();
+}
+
+export default function DownloadPDF() {
   return (
     <div>
-      <button>Download CV</button>
+      <button className="btn btn-primary" onClick={generatePDF}>
+        Download CV
+      </button>
     </div>
   );
 }
