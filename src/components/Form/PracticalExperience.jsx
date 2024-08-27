@@ -56,7 +56,7 @@ export default function PracticalExperience({
             name="yearsOfExperience"
             value={practicalExperience.yearsOfExperience}
             min={0}
-            placeholder="0"
+            placeholder="e.g 0"
           />
         </div>
         <div className="d-flex justify-content-between">
