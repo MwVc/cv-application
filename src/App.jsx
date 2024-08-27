@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "./components/Form/Form";
 import Resume from "./components/Resume/Resume";
+import DownloadPDF from "./components/Utilities/DownloadPDF";
 import "./App.css";
 
 function App() {
@@ -58,7 +59,7 @@ function App() {
       <div className="container">
         <div className="container d-flex flex-row">
           <div className="inner-div flex-fill p-3 w-25">
-            <section id="general-information">
+            <section id="general-information" className="d-flex flex-column">
               <Form
                 generalInformation={generalInformation}
                 setGeneralInformation={setGeneralInformation}
@@ -85,6 +86,7 @@ function App() {
                 submittedProjects={submittedProjects}
                 setSubmittedProjects={setSubmittedProjects}
               />
+              <DownloadPDF />
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
