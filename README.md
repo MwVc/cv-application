@@ -7,10 +7,8 @@
 ## Key Features
 
 - **User-friendly interface**: The app provides a straightforward and intuitive experience for creating and customizing resumes.
-- **Customizable templates**: Users can choose from various pre-designed templates or create their own unique layouts.
 - **Dynamic form fields**: The application includes a form for users to input their personal and professional information.
 - **Real-time preview**: Users can see how their resume will look as they make changes.
-- **Responsive design**: The app is optimized to work seamlessly on different devices and screen sizes.
 
 ## Technologies Used
 
@@ -28,7 +26,5 @@
 ## Future Enhancements
 
 - **PDF export**: Implement a feature to allow users to download their resume as a PDF.
-- **Additional customization options**: Offer more customization options for fonts, colors, and layouts.
-- **Integration with job boards**: Explore the possibility of integrating with popular job boards to streamline the job application process.
 
 > **Note**: This project is primarily intended for educational purposes and may not include all the features and functionalities of a fully-fledged CV builder.
