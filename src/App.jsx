@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Form from "./components/Form/Form";
 import Resume from "./components/Resume/Resume";
-import DownloadPDF from "./components/Utilities/DownloadPDF";
 import "./App.css";
 
 function App() {
@@ -86,7 +85,6 @@ function App() {
                 submittedProjects={submittedProjects}
                 setSubmittedProjects={setSubmittedProjects}
               />
-              <DownloadPDF />
             </section>
           </div>
           <div className="inner-div flex-fill p-3">
