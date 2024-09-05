@@ -6,7 +6,7 @@ export default function Nav() {
       <div className="container">
         <a href="#" className="navbar-brand fs-2 fw-bolder">
           <img src="/icon.png" alt="logo" width="30" height="24" />
-          CV Aplication
+          CV Application
         </a>
       </div>
     </nav>
