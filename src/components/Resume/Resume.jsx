@@ -12,18 +12,15 @@ export default function Resume({
     <div className="page" data-size="A4">
       <div className="box">
         <div className="left-panel">
-          {/* <img src="#" alt="Profile Picture" className="display-picture" /> */}
           <div className="details">
             <div className="item bottom-line-separator">
               <h2>CONTACT</h2>
               <div className="small-text">
                 <p>
-                  <i className="bi bi-telephone contact-icon"></i>
                   {submittedGeneralInformation &&
                     submittedGeneralInformation.phone}
                 </p>
                 <p>
-                  <i className="bi bi-envelope contact-icon"></i>
                   <a
                     href="https://mail.google.com/mail/u/0/#inbox"
                     target="_blank"
@@ -33,7 +30,6 @@ export default function Resume({
                   </a>
                 </p>
                 <p className="last-pararaph-no-margin-bottom">
-                  <i className="bi bi-geo-alt-fill contact-icon"></i>
                   {submittedGeneralInformation &&
                     `${submittedGeneralInformation.city}, ${submittedGeneralInformation.country}`}
                 </p>
